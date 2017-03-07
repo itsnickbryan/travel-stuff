@@ -44,7 +44,7 @@
 	a {
 		color: #fff;
 		text-decoration: none;
-		font-weight: 200;
+		font-weight: 300;
 		display: block;
 		padding: 5px 8px;
 		font-size: .8rem;
@@ -54,6 +54,10 @@
 			background-color: transparent;
 			font-size: 1rem;
 			padding: 12px 0;
+
+			&.is-current-link {
+				color: #fabb69;
+			}
 		}
 	}
 }

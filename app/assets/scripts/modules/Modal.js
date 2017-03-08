@@ -1,31 +1,38 @@
 import $ from 'jquery';
+
 class Modal {
-	constructor() {
-		this.openModalButton = $(".open-modal");
-		this.modal = $(".modal");
-		this.closeModalButton = $(".modal__close");
-		this.events();
-	}
-	events() {
-		//clicking the open modal button
-			this.openModalButton.click(this.openModal.bind(this));
+  constructor() {
+    this.openModalButton = $(".open-modal");
+    this.modal = $(".modal");
+    this.closeModalButton = $(".modal__close");
+    this.events();
+  }
 
-		// clicking the x close modal button
-			this.closeModalButton.click(this.closeModal.bind(this));
+  events() {
+    // clicking the open modal button
+    this.openModalButton.click(this.openModal.bind(this));
 
-		// pushes the escape key
+    // clicking the x close modal button
+    this.closeModalButton.click(this.closeModal.bind(this));
 
-	}
+    // pushes any key
+    $(document).keyup(this.keyPressHandler.bind(this));
+  }
 
-	openModal() {
-		this.modal.addClass("modal--is-visible");
-		return false; // Prevents the browser from returning to the top through the href link "#", which is a default action.
-	}
+  keyPressHandler(e) {
+    if (e.keyCode == 27) {
+      this.closeModal();
+    }
+  }
 
-	closeModal() {
-		
-		that.modal.removeClass("modal--is-visible");
-	}
+  openModal() {
+    this.modal.addClass("modal--is-visible");
+    return false;
+  }
+
+  closeModal() {
+    this.modal.removeClass("modal--is-visible");
+  }
 }
 
-export defualt Modal;
+export default Modal;

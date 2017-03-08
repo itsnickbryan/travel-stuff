@@ -36,7 +36,7 @@
 		top: 15px;
 		right: 15px;
 		font-size: 2rem;
-		transform: scaleX(1.2);
+		transform: scaleX(1.4);
 		transform-origin: 100% 0;
 		color: $mainBlue;
 		cursor: pointer;

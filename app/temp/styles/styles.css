@@ -1440,8 +1440,8 @@ Instead edit gulp/templates/sprite */
   top: 15px;
   right: 15px;
   font-size: 2rem;
-  -webkit-transform: scaleX(1.2);
-          transform: scaleX(1.2);
+  -webkit-transform: scaleX(1.4);
+          transform: scaleX(1.4);
   -webkit-transform-origin: 100% 0;
           transform-origin: 100% 0;
   color: #2f5572;
